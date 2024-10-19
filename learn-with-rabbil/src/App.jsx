@@ -1,11 +1,16 @@
 
 const App = () => {
-    const mark = 70;
+    const postFormData = (e) => {
+        e.preventDefault()
+    }
+
     return (
         <div>
-            {
-                mark < 80 ? <h1>average result</h1> : <h1>brilliant result</h1>
-            }
+            <form onSubmit={postFormData}>
+                <input type="text" name="" placeholder="Name" id="" />
+                <button type="submit">Submit</button>
+            </form>
+
         </div>
     );
 };
