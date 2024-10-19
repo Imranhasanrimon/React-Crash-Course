@@ -1,13 +1,13 @@
 
-function App() {
+const App = () => {
+    const mark = 70;
+    return (
+        <div>
+            {
+                mark < 80 ? <h1>average result</h1> : <h1>brilliant result</h1>
+            }
+        </div>
+    );
+};
 
-  return (
-    <>
-
-      <h1>Vite + React</h1>
-
-    </>
-  )
-}
-
-export default App
+export default App;
