@@ -1,18 +1,16 @@
+import { useState } from "react";
 
 const App = () => {
-    const postFormData = (e) => {
-        e.preventDefault()
+    const [status, setStatus] = useState(false);
+    const changeStatus = () => {
+        setStatus(!status);
     }
-
     return (
         <div>
-            <form onSubmit={postFormData}>
-                <input type="text" name="" placeholder="Name" id="" />
-                <button type="submit">Submit</button>
-            </form>
-
+            <button onClick={changeStatus}>{status ? 'ON' : 'Off'}</button>
         </div>
     );
 };
 
 export default App;
+
